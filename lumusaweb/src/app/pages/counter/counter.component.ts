@@ -3,13 +3,7 @@ import {Component} from '@angular/core';
 
 @Component
 ({
-  template: `
-  <h1>Counter Component</h1>
-  <h2>{{counter}}</h2>
-  <button (click)="increasedBy(1)">+1</button>
-  <button (click)="decreaseBy(1)">-1</button>
-  <button (click)="resetCounter()">Reset</button>
-  `,
+  templateUrl: './counter.component.html',
 })
 
 export class CounterComponent
