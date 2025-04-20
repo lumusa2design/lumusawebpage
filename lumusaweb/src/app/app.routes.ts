@@ -10,5 +10,9 @@ export const routes: Routes = [
   {
     path: 'hero',
     component: HeroComponent,
+  },
+  {
+    path: '**',
+    redirectTo: '',
   }
 ];
