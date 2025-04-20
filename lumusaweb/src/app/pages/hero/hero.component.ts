@@ -1,22 +1,24 @@
-import {Component, signal} from '@angular/core';
+import {Component, computed, signal} from '@angular/core';
+import {UpperCasePipe} from '@angular/common';
 
 
 @Component(
   {
     templateUrl: './hero.component.html',
     selector:'hero',
+    imports:[UpperCasePipe]
   })
 
 export class HeroComponent
 {
   name=signal('Ironman');
   age=signal(45);
+  heroDescription = computed(()=>{
+    const description = `${(this.name())} - ${this.age()}`;
+    return description;
+  })
 
 
-  getHeroDescription()
-  {
-    return `${this.name()} ${this.age()}`;
-  }
 
   changeHero()
   {
