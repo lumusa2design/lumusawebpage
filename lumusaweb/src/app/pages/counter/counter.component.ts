@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, signal} from '@angular/core';
 
 
 @Component
@@ -8,22 +8,26 @@ import {Component} from '@angular/core';
 
 export class CounterComponent
 {
-  counter = 10;
+  counter = 0;
+  counterSignal = signal(10);
 
   increasedBy(value: number)
   {
 
     this.counter += 1;
+    this.counterSignal.update((currentValue) => currentValue + 1);
   }
   decreaseBy(value:number)
   {
-    if (this.counter >= 0){
+    if (this.counter > 0){
       this.counter -= 1;
+      this.counterSignal.update((currentValue) => currentValue - 1);
     }
   }
 
   resetCounter()
   {
-    this.counter = 10;
+    this.counter = 0;
+    this.counterSignal.set(0);
   }
 }
