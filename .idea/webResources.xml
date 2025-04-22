@@ -6,6 +6,7 @@
         <entryData>
           <resourceRoots>
             <path value="file://$PROJECT_DIR$/lumusaweb" />
+            <path value="file://$PROJECT_DIR$/lumusaweb/src/app/componentes/shared/dragonball" />
           </resourceRoots>
         </entryData>
       </entry>
