@@ -41,4 +41,5 @@ export class DragonballSuperPageComponent {
     this.name.set('');
     this.power.set(0);
   }
+
 }
