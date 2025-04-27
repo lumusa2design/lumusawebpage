@@ -1,5 +1,7 @@
 import {Component, signal} from '@angular/core';
 import {DragonballCharListComponent} from '../../componentes/shared/dragonball/dragonball-char-list/dragonball-char-list.component'
+import {DragonballCharacterAddComponent} from './dbcomponents/dragonball-character-add/dragonball-character-add.component';
+
 interface Characters
 {
   id: number;
@@ -8,7 +10,7 @@ interface Characters
 }
 @Component({
   templateUrl: "./dragonball-page.component.html",
-  imports:[DragonballCharListComponent],
+  imports: [DragonballCharListComponent, DragonballCharacterAddComponent],
 })
 
 export class DragonballPageComponent {
@@ -21,20 +23,9 @@ export class DragonballPageComponent {
     {id: 2, name: "Vegeta", power:8002},
     {id: 3, name: "Piccolo", power:1000},
   ]);
-  AddCharacter()
+  AddCharacter(character: Characters)
   {
-    if(!this.name() || !this.power() || this.power() < 0)
-    {
-      throw new Error("Dont character!");
-    }
-
-    const newCharacter: Characters =
-      {
-        id:this.characters().length + 1, name: this.name(), power: this.power(),
-      };
-
-    this.characters.update((list) =>[...list, newCharacter]);
-    this.ResetFields();
+    this.characters.update((list) => [...list, character]);
   }
 
   ResetFields()

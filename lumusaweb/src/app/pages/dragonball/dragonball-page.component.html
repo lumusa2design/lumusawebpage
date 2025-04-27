@@ -5,10 +5,8 @@
 <section class="row">
 
 
-
+  <app-dragonball-puto-list (newCharacter)="AddCharacter($event)" )/>
   <div class="col-12 col-sm-6">
-
     <app-dragonball-char-list  listName="Listado de personajes" [characters] ="characters()"/>
-
   </div>
 </section>

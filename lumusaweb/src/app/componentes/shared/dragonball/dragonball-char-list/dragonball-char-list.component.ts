@@ -9,5 +9,5 @@ import type {Characters} from '../../../../inferfaces/character.interface';
 })
 export class DragonballCharListComponent {
   characters = input.required<Characters[]>();
-
+  listName = input.required<string>();
 }
