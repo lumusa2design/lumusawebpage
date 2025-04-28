@@ -2,8 +2,9 @@
   <h2>Listado de libros</h2>
 
   <ol>
-@for (book of books(); track book.title)
+@for (book of books; track book.title)
 {
-  <li>{{book.title}} - {{book.author}}</li>
+  <li>{{book.title}} - {{book.author}} </li>
+  <div class="btn btn-danger" (click)="deleteBook(book)"> Borrar</div>
 }
   </ol>

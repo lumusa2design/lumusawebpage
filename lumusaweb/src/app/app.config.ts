@@ -1,16 +1,21 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { environment } from '../environments/environment'; // 🔵 Corrige el import aquí también
 
 import { routes } from './app.routes';
-import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }),
+  providers: [
+    provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-  //Hash Strategy
-    {provide:LocationStrategy,
-  useClass: HashLocationStrategy,},
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+
+    // 🔥 Aquí añadimos Firebase y Firestore
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    provideFirestore(() => getFirestore())
   ]
-
-
 };

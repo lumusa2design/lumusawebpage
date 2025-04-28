@@ -1,5 +1,6 @@
 import {Component, input} from '@angular/core';
 import {Book} from '../../../inferfaces/book';
+import {BooksService} from '../../../services/books.service';
 
 @Component({
   selector: 'allbooks',
@@ -8,5 +9,21 @@ import {Book} from '../../../inferfaces/book';
 
 export class AllBooksComponent
 {
-books = input<Book[]>();
+  books: Book[] = []
+  constructor(private bookService: BooksService) {
+  }
+
+  ngOnInit()
+  {
+    this.bookService.getBooks().subscribe(books =>{this.books = books;});
+
+  }
+
+  async deleteBook(book: Book)
+  {
+    const response = await this.bookService.deleteBook(book);
+  console.log(response);
+  }
+// books = input<Book[]>();
+
 }
