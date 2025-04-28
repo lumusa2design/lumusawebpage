@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collection, addDoc, collectionData, doc, deleteDoc } from '@angular/fire/firestore';
+import { Firestore, collection, addDoc, collectionData, doc, deleteDoc, updateDoc } from '@angular/fire/firestore';
 import { Book } from '../inferfaces/book';
 import { Observable } from 'rxjs';
 
@@ -24,5 +24,11 @@ export class BooksService {
   {
     const bookRef = doc(this.firestore, `books/${book.id}`);
     return deleteDoc(bookRef)
+  }
+
+  async updateBook(book: Book) {
+    const bookRef = doc(this.firestore, `books/${book.id}`);
+    const updatedBook = { title: book.title, author: book.author }; // No actualizamos id
+    return await updateDoc(bookRef, updatedBook);
   }
 }
