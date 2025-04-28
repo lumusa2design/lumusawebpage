@@ -1,4 +1,9 @@
 
   <h2>Listado de libros</h2>
-  Miguel de Cervantes - Don Quijote de la Mancha
 
+  <ol>
+@for (book of books(); track book.title)
+{
+  <li>{{book.title}} - {{book.author}}</li>
+}
+  </ol>

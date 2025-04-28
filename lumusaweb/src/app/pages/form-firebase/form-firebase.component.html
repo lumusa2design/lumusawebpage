@@ -2,10 +2,11 @@
 
 <div class="row">
 <div class="col-6">
-<book-form/>
+  <book-form (bookAdded)="AddBook($event)"></book-form>
+
 </div>
 
 <div class="col-6">
-<allbooks></allbooks>
+<allbooks [books]="books()"></allbooks>
 </div>
 </div>

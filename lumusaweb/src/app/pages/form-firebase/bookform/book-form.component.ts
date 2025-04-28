@@ -1,4 +1,4 @@
-import {Component, signal} from '@angular/core';
+import {Component, output, signal} from '@angular/core';
 import {Book} from '../../../inferfaces/book';
 
 @Component({
@@ -9,9 +9,21 @@ import {Book} from '../../../inferfaces/book';
 export class BookFormComponent
 {
 
-  books = signal<Book[]>([]);
+  titulo = signal("");
+  autor = signal("");
+
+
+  bookAdded = output<Book>()
+
   AddBook()
   {
-    //if (){}
+    if (this.titulo && this.autor)
+    {
+      const newBook: Book = {title: this.titulo(), author: this.autor()}
+      this.bookAdded.emit(newBook);
+
+      this.titulo.set("");
+      this.autor.set("");
+    }
   }
 }
