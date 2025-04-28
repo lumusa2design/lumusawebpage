@@ -3,6 +3,8 @@ import {CounterComponent} from './pages/counter/counter.component';
 import {HeroComponent} from './pages/hero/hero.component';
 import {DragonballPageComponent} from './pages/dragonball/dragonball-page.component';
 import {DragonballSuperPageComponent} from './pages/dragonball-super/dragonball-super-page.component';
+import {FormFirebaseComponent} from './pages/form-firebase/form-firebase.component';
+
 export const routes: Routes = [
   {
     path: '',
@@ -21,7 +23,12 @@ export const routes: Routes = [
     component:DragonballSuperPageComponent,
   },
   {
+    path: 'form',
+    component: FormFirebaseComponent,
+  },
+  {
     path: '**',
     redirectTo: '',
-  }
+  },
+
 ];
