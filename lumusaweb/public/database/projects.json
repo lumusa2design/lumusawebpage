@@ -3,26 +3,26 @@
   {
     "title": "Link-Com",
     "description": "",
-    "technologies": "",
-    "image": "",
-    "link": "",
+    "technologies": "\"Angular, HTML, CSS,Supabase",
+    "image": "linkcom.png",
+    "link": "https://github.com/HeliotGonzalez/LinkCom-Frontend",
     "video": ""
   },
 
   {
     "title": "jack-of-all-games",
     "description": "",
-    "technologies": "",
-    "image": "",
-    "link": "",
+    "technologies": "Angular, HTML, CSS, Firebase",
+    "image": "jackofallgames.png",
+    "link": "https://github.com/AVR21/jack-of-all-games",
     "video": ""
   },
   {
     "title": "algorithms",
     "description": "",
-    "technologies": "",
-    "image": "",
-    "link": "",
+    "technologies": "Python",
+    "image": "algorithms.png",
+    "link": "https://github.com/lumusa2design/algorithms",
     "video": ""
   }
 ]

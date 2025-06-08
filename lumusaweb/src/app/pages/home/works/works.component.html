@@ -1,6 +1,11 @@
 
-  @for(project of projects; track $index)
-  {
-    hola : {{project.title}}
-  }
+<div class="container mt-4 " style="background-color: lightgray">
+  <div class="row">
+    @for (project of projects; track $index) {
+      <div class="col-md-4 mb-4">
+         <app-workTargets [project]="project"/>
+      </div>
+    }
+  </div>
+</div>
 

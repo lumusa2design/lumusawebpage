@@ -1,1 +1,16 @@
-<p>work.targets works!</p>
+<div class="card h-100 shadow-sm">
+  <img [src]="project.image" class="card-img-top" alt="{{ project.title }} image">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title">{{ project.title }}</h5>
+    <p class="card-text">{{ project.description }}</p>
+    <ul class="list-inline mb-3">
+
+      <li class="list-inline-item badge bg-secondary me-1">
+        {{ project.technologies }}
+      </li>
+    </ul>
+    <a [href]="project.link" class="btn btn-primary mt-auto" target="_blank" rel="noopener noreferrer">
+      Ver proyecto
+    </a>
+  </div>
+</div>

@@ -1,10 +1,14 @@
 import {Component, OnInit} from '@angular/core';
 import {ProjectsInterface} from '../../../../interfaces/projects.interface';
 import {WorksJsonServiceService} from '../../../../services/works.json.service.service';
+import {WorkTargetsComponent} from './work.targets/work.targets.component';
+
 
 @Component({
   selector: 'app-works',
-  imports: [],
+  imports: [
+    WorkTargetsComponent
+  ],
   templateUrl: './works.component.html',
   styleUrl: './works.component.css'
 })
