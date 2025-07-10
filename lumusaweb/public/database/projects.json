@@ -24,5 +24,14 @@
     "image": "algorithms.png",
     "link": "https://github.com/lumusa2design/algorithms",
     "video": ""
+  },
+  {
+    "title": "Phantom Hide",
+    "description": "",
+    "technologies": "C#, Unity",
+    "image": "phantom_hide.png",
+    "link": "https://github.com/lumusa2design/phantom_hide",
+    "video": ""
   }
+
 ]
