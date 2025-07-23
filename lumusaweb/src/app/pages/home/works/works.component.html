@@ -1,12 +1,11 @@
 
-<div  style="background-color: lightgray">
+<div class="container personal-row">
   <h2>Projects</h2>
   <div class="row">
     @for (project of projects; track $index) {
       <div class="col-md-4 mb-4">
-         <app-workTargets [project]="project"/>
+        <app-workTargets [project]="project"/>
       </div>
     }
   </div>
 </div>
-

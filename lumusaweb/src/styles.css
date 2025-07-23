@@ -17,3 +17,10 @@ app-root {
   flex-direction: column;
   flex: 1;
 }
+
+.personal-row
+{
+  background-color: lightgray ;
+  padding: 30px;
+}
+
