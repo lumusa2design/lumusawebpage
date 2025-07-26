@@ -32,6 +32,14 @@
     "image": "phantom_hide.png",
     "link": "https://github.com/lumusa2design/phantom_hide",
     "video": ""
+  },
+  {
+    "title": "UP2U",
+    "description": "",
+    "technologies": "Angular, HTML, CSS, Firebase",
+    "image": "UP2U.png",
+    "link": "https://github.com/lumusa2design/control_up_db",
+    "video": ""
   }
 
 ]
