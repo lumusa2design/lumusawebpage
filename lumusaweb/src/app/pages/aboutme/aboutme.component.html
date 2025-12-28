@@ -1,6 +1,60 @@
-<div class="container personal-row">
-  <p><b>Name:</b> Luis Muñoz Sanz</p>
-  <p>I am a Computer Engineering Student  at ULPGC(Universidad de Las Palmas de Gran Canaria)</p>
-  <p><b>Alias:</b> lumusa2design</p>
-  <p><b>Country:</b> Spain</p>
-</div>
+<section class="about-hero">
+  <div
+    #glHost
+    class="gl-layer"
+    aria-hidden="true"
+    (pointermove)="onPointerMove($event)"
+    (pointerdown)="onPointerDown($event)"
+  ></div>
+
+  <div class="content container">
+    <div class="card glass">
+      <h1 class="title">
+        Luis Muñoz Sanz <span class="muted">/ lumusa2design</span>
+      </h1>
+
+      <p class="lead">
+        Estudiante de Ingeniería Informática en la ULPGC. Me flipa construir cosas: software útil,
+        sistemas sólidos y experiencias interactivas.
+      </p>
+
+      <div class="grid">
+        <div class="block">
+          <h3>Lo que hago</h3>
+          <ul>
+            <li>Desarrollo web con <b>Angular</b> y front moderno.</li>
+            <li>Programación y algoritmia (Python/C/C++).</li>
+            <li>Experimentos con <b>WebGL</b> (Three.js), 3D y escenas interactivas.</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <h3>Cómo trabajo</h3>
+          <ul>
+            <li>Entiendo el problema, lo parto en piezas y lo aterrizo.</li>
+            <li>Itero rápido: prototipo → test → refino.</li>
+            <li>Código claro, rendimiento y mantenibilidad.</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <h3>Ahora mismo</h3>
+          <ul>
+            <li>Busco prácticas / junior / proyectos colaborativos.</li>
+            <li>Retos reales donde aportar y subir de nivel.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="chips">
+        <span class="chip">Angular</span>
+        <span class="chip">Three.js</span>
+        <span class="chip">Python</span>
+        <span class="chip">C/C++</span>
+        <span class="chip">Linux</span>
+      </div>
+
+      <p class="footer"><b>Ubicación:</b> España</p>
+    </div>
+  </div>
+</section>

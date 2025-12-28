@@ -1,0 +1,103 @@
+.about-hero {
+  position: relative;
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+
+  background:
+    radial-gradient(1200px 500px at 20% 20%, rgba(255,255,255,0.25), transparent 60%),
+    radial-gradient(900px 600px at 80% 40%, rgba(255,255,255,0.18), transparent 60%),
+    linear-gradient(180deg, #0b1220, #0a0f1a);
+}
+
+.gl-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: auto; /* NECESARIO para interacción */
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 40px 16px;
+  pointer-events: none; /* para que el click vaya al fondo */
+}
+
+.card.glass {
+  pointer-events: auto; /* pero la card sí debe ser clicable/seleccionable */
+  border-radius: 18px;
+  padding: 28px 26px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+  color: rgba(255,255,255,0.92);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  transform: translateZ(0);
+  transition: transform 180ms ease;
+}
+
+.about-hero:hover .card.glass {
+  transform: translateY(-2px);
+}
+
+.title {
+  margin: 0 0 10px;
+  font-size: 28px;
+  letter-spacing: 0.2px;
+}
+
+.muted { opacity: 0.75; font-weight: 500; }
+
+.lead {
+  margin: 0 0 18px;
+  font-size: 16px;
+  opacity: 0.92;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 18px 0;
+}
+
+.block {
+  padding: 14px 14px;
+  border-radius: 14px;
+  background: rgba(0,0,0,0.18);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.block h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.block ul { margin: 0; padding-left: 18px; line-height: 1.55; }
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.chip {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.footer { margin: 16px 0 0; opacity: 0.9; }
+
+@media (max-width: 992px) {
+  .grid { grid-template-columns: 1fr; }
+}
