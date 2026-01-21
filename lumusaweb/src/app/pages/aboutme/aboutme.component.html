@@ -7,54 +7,53 @@
     (pointerdown)="onPointerDown($event)"
   ></div>
 
-  <div class="content container">
-    <div class="card glass">
-      <h1 class="title">
-        Luis Muñoz Sanz <span class="muted">/ lumusa2design</span>
-      </h1>
-
-      <p class="lead">
-        Estudiante de Ingeniería Informática en la ULPGC. Me flipa construir cosas: software útil,
-        sistemas sólidos y experiencias interactivas.
-      </p>
-
-      <div class="grid">
-        <div class="block">
-          <h3>Lo que hago</h3>
-          <ul>
-            <li>Desarrollo web con <b>Angular</b> y front moderno.</li>
-            <li>Programación y algoritmia (Python/C/C++).</li>
-            <li>Experimentos con <b>WebGL</b> (Three.js), 3D y escenas interactivas.</li>
-          </ul>
-        </div>
-
-        <div class="block">
-          <h3>Cómo trabajo</h3>
-          <ul>
-            <li>Entiendo el problema, lo parto en piezas y lo aterrizo.</li>
-            <li>Itero rápido: prototipo → test → refino.</li>
-            <li>Código claro, rendimiento y mantenibilidad.</li>
-          </ul>
-        </div>
-
-        <div class="block">
-          <h3>Ahora mismo</h3>
-          <ul>
-            <li>Busco prácticas / junior / proyectos colaborativos.</li>
-            <li>Retos reales donde aportar y subir de nivel.</li>
-          </ul>
-        </div>
+  <div class="hud container">
+    <div class="glass top">
+      <div class="title">
+        <div class="name">Luis Muñoz Sanz</div>
+        <div class="alias">lumusa2design</div>
       </div>
 
-      <div class="chips">
-        <span class="chip">Angular</span>
-        <span class="chip">Three.js</span>
-        <span class="chip">Python</span>
-        <span class="chip">C/C++</span>
-        <span class="chip">Linux</span>
+      <div class="modes">
+        <button class="chip" [class.active]="mode==='PAINT'" (click)="setMode('PAINT')">Paint</button>
+        <button class="chip" [class.active]="mode==='VORTEX'" (click)="setMode('VORTEX')">Vortex</button>
+        <button class="chip" [class.active]="mode==='BURST'" (click)="setMode('BURST')">Burst</button>
+        <button class="chip" (click)="togglePause()">{{ paused ? 'Resume' : 'Pause' }}</button>
       </div>
+    </div>
 
-      <p class="footer"><b>Ubicación:</b> España</p>
+    <div class="glass bottom">
+      <div class="about">
+        <p class="lead">
+          Estudiante de Ingeniería Informática (ULPGC). Me gusta construir software útil, experimentar con WebGL/3D
+          y aprender haciendo proyectos reales.
+        </p>
+
+        <div class="row2">
+          <div class="block">
+            <div class="h">Enfoque</div>
+            <ul>
+              <li>Angular / front moderno</li>
+              <li>Algoritmia y sistemas</li>
+              <li>Experiencias interactivas (WebGL)</li>
+            </ul>
+          </div>
+
+          <div class="block">
+            <div class="h">Ahora</div>
+            <ul>
+              <li>Prácticas / junior / proyectos</li>
+              <li>Retos reales + aprendizaje</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tipline">{{ tips }}</div>
+        <div class="mini">
+          <span>Intensity: {{ intensity | number:'1.1-1' }}</span>
+          <span>Keys: 1/2/3 • P pause • +/- intensity</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>

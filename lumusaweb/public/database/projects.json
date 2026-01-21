@@ -40,6 +40,14 @@
     "image": "UP2U.png",
     "link": "https://github.com/lumusa2design/control_up_db",
     "video": ""
+  },
+  {
+    "title": "Algorithms Arena",
+    "description": "",
+    "technologies": "Python",
+    "image": "UP2U.png",
+    "link": "https://github.com/lumusa2design/algorithm_arena",
+    "video": ""
   }
 
 ]

@@ -1,103 +1,136 @@
-.about-hero {
+.about-hero{
   position: relative;
-  min-height: 70vh;
-  display: grid;
-  place-items: center;
+  min-height: 80vh;
   overflow: hidden;
-
   background:
-    radial-gradient(1200px 500px at 20% 20%, rgba(255,255,255,0.25), transparent 60%),
-    radial-gradient(900px 600px at 80% 40%, rgba(255,255,255,0.18), transparent 60%),
-    linear-gradient(180deg, #0b1220, #0a0f1a);
+    radial-gradient(1200px 500px at 20% 20%, rgba(255,255,255,0.20), transparent 60%),
+    radial-gradient(900px 600px at 80% 40%, rgba(255,255,255,0.14), transparent 60%),
+    linear-gradient(180deg, #0b1220, #070b12);
 }
 
-.gl-layer {
+.gl-layer{
   position: absolute;
   inset: 0;
   z-index: 1;
-  pointer-events: auto; /* NECESARIO para interacción */
+  pointer-events: auto;
 }
 
-.content {
+.hud{
   position: relative;
   z-index: 2;
-  padding: 40px 16px;
-  pointer-events: none; /* para que el click vaya al fondo */
+  padding: 20px 14px;
+  pointer-events: none;
 }
 
-.card.glass {
-  pointer-events: auto; /* pero la card sí debe ser clicable/seleccionable */
-  border-radius: 18px;
-  padding: 28px 26px;
+.hud button{
+  pointer-events: auto;
+}
+
+.glass{
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.12);
   backdrop-filter: blur(10px);
   color: rgba(255,255,255,0.92);
+  border-radius: 16px;
   box-shadow: 0 20px 60px rgba(0,0,0,0.35);
-  transform: translateZ(0);
-  transition: transform 180ms ease;
 }
 
-.about-hero:hover .card.glass {
-  transform: translateY(-2px);
+.top{
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-.title {
-  margin: 0 0 10px;
-  font-size: 28px;
+.title .name{
+  font-size: 18px;
+  font-weight: 800;
   letter-spacing: 0.2px;
 }
 
-.muted { opacity: 0.75; font-weight: 500; }
+.title .alias{
+  opacity: 0.75;
+  font-size: 12px;
+  margin-top: -2px;
+}
 
-.lead {
-  margin: 0 0 18px;
-  font-size: 16px;
-  opacity: 0.92;
+.modes{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.chip{
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.92);
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.chip.active{
+  background: rgba(255,255,255,0.14);
+}
+
+.bottom{
+  margin-top: 14px;
+  padding: 16px;
+}
+
+.lead{
+  margin: 0 0 12px;
   line-height: 1.6;
+  opacity: 0.95;
 }
 
-.grid {
+.row2{
   display: grid;
-  gap: 14px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin: 18px 0;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 10px 0 14px;
 }
 
-.block {
-  padding: 14px 14px;
+.block{
+  padding: 12px 12px;
   border-radius: 14px;
   background: rgba(0,0,0,0.18);
   border: 1px solid rgba(255,255,255,0.08);
 }
 
-.block h3 {
-  margin: 0 0 8px;
-  font-size: 14px;
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
-  opacity: 0.9;
-}
-
-.block ul { margin: 0; padding-left: 18px; line-height: 1.55; }
-
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 14px;
-}
-
-.chip {
-  padding: 6px 10px;
-  border-radius: 999px;
+.block .h{
   font-size: 12px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  opacity: 0.85;
+  margin-bottom: 6px;
 }
 
-.footer { margin: 16px 0 0; opacity: 0.9; }
+.block ul{
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.55;
+}
 
-@media (max-width: 992px) {
-  .grid { grid-template-columns: 1fr; }
+.tipline{
+  opacity: 0.9;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.mini{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  opacity: 0.75;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+@media (max-width: 992px){
+  .row2{ grid-template-columns: 1fr; }
 }
