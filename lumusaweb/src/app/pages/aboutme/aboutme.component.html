@@ -2,7 +2,6 @@
   <div
     #glHost
     class="gl-layer"
-    aria-hidden="true"
     (pointermove)="onPointerMove($event)"
     (pointerdown)="onPointerDown($event)"
   ></div>
@@ -23,36 +22,14 @@
     </div>
 
     <div class="glass bottom">
-      <div class="about">
-        <p class="lead">
-          Estudiante de Ingeniería Informática (ULPGC). Me gusta construir software útil, experimentar con WebGL/3D
-          y aprender haciendo proyectos reales.
-        </p>
+      <p class="lead">
+        Estudiante de Ingeniería Informática (ULPGC). Desarrollo experiencias interactivas y arte generativo con WebGL.
+      </p>
 
-        <div class="row2">
-          <div class="block">
-            <div class="h">Enfoque</div>
-            <ul>
-              <li>Angular / front moderno</li>
-              <li>Algoritmia y sistemas</li>
-              <li>Experiencias interactivas (WebGL)</li>
-            </ul>
-          </div>
-
-          <div class="block">
-            <div class="h">Ahora</div>
-            <ul>
-              <li>Prácticas / junior / proyectos</li>
-              <li>Retos reales + aprendizaje</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="tipline">{{ tips }}</div>
-        <div class="mini">
-          <span>Intensity: {{ intensity | number:'1.1-1' }}</span>
-          <span>Keys: 1/2/3 • P pause • +/- intensity</span>
-        </div>
+      <div class="tipline">{{ tips }}</div>
+      <div class="mini">
+        <span>Intensity: {{ intensity | number:'1.1-1' }}</span>
+        <span>Keys: 1/2/3 • P • +/-</span>
       </div>
     </div>
   </div>
