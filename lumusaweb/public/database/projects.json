@@ -48,6 +48,14 @@
     "image": "UP2U.png",
     "link": "https://github.com/lumusa2design/algorithm_arena",
     "video": ""
+  },
+  {
+    "title": "Visual Fruit Ninja",
+    "description": "",
+    "technologies": "Python",
+    "image": "SPLASH_SCREEN.png",
+    "link": "https://github.com/Nayade-5/VC-Practicas_g9/tree/main/FruitNinja",
+    "video": ""
   }
 
 ]
