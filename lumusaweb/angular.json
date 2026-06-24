@@ -27,7 +27,7 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -99,5 +99,13 @@
         }
       }
     }
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "scss"
+    }
+  },
+  "cli": {
+    "analytics": "837ebfc7-7bc8-47a2-80ab-46098c05caec"
   }
 }
