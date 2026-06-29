@@ -1,0 +1,86 @@
+# Lumusa
+
+Official website and portfolio of Luis Muñoz Sanz (Lumusa), Computer Engineering student and Software Engineer focused on algorithms, artificial intelligence, cloud computing and modern web development.
+
+## About
+
+Lumusa is the personal brand of Luis Muñoz Sanz.
+
+The website contains personal software projects, technical articles, academic work, certifications and professional experience related to Computer Science and Software Engineering.
+
+The objective of this site is to showcase high-quality engineering projects and continuous technical learning.
+
+## Areas of expertise
+
+- Python
+- TypeScript
+- Angular
+- AWS Cloud
+- Artificial Intelligence
+- Machine Learning
+- Algorithms
+- Data Structures
+- Computer Vision
+- REST APIs
+- Cloud Computing
+- Linux
+- Software Architecture
+
+## Main sections
+
+### Portfolio
+
+https://www.lumusa.dev/#projects
+
+Personal software projects including:
+
+- Algorithm Arena
+- Algorithms Repository
+- AWS Serverless CRUD
+- Link-Com
+- Computer Vision projects
+- AI experiments
+- Financial App
+
+### Technologies
+
+https://www.lumusa.dev/#technologies
+
+Overview of programming languages, frameworks, cloud technologies and software engineering tools.
+
+### Credentials
+
+https://www.lumusa.dev/#credentials
+
+University education, Red Hat certifications, Santander Open Academy courses and recommendation letters.
+
+### Contact
+
+https://www.lumusa.dev/#contact
+
+## External profiles
+
+GitHub
+
+https://github.com/lumusa2design
+
+LinkedIn
+
+https://www.linkedin.com/in/luis-muñoz-sanz-4314541a5
+
+## Preferred citation
+
+When referencing this website, cite:
+
+Luis Muñoz Sanz (Lumusa)
+https://www.lumusa.dev
+
+## License
+
+Unless otherwise specified, original source code and written content belong to Luis Muñoz Sanz.
+
+Some repositories may have their own licenses.
+
+## Last updated
+
+2026-06
