@@ -11,11 +11,6 @@ import { routes } from './app.routes';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes),
-    { provide: LocationStrategy, useClass: HashLocationStrategy },
-
-    // 🔥 Aquí añadimos Firebase y Firestore
-    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
-    provideFirestore(() => getFirestore())
+    provideRouter(routes)
   ]
 };
