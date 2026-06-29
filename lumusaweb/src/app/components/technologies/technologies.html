@@ -1,1 +1,41 @@
-<p>technologies works!</p>
+<section class="technologies" id="technologies">
+  <div class="section-header">
+    <p>Tecnologías</p>
+    <h2>Un desarrollador polytrópico</h2>
+  </div>
+
+  <div class="tech-layout">
+    <div class="tech-orbit">
+      <div class="tech-core">
+        <strong>Luis</strong>
+        <span>Software profile</span>
+      </div>
+
+      @for (area of areas; track area.id) {
+        <button
+          class="tech-node"
+          [class.active]="selected === area.id"
+          [class]="area.id"
+          (click)="selectArea(area.id)"
+        >
+          <strong>{{ area.title }}</strong>
+          <span>{{ area.subtitle }}</span>
+        </button>
+      }
+    </div>
+
+    <article class="tech-panel">
+      <span class="panel-label">Área seleccionada</span>
+
+      <h3>{{ activeArea.title }}</h3>
+
+      <p>{{ activeArea.description }}</p>
+
+      <div class="tech-list">
+        @for (item of activeArea.items; track item) {
+          <span>{{ item }}</span>
+        }
+      </div>
+    </article>
+  </div>
+</section>

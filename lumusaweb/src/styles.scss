@@ -14,10 +14,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
   font-family: Inter, system-ui, sans-serif;
@@ -28,12 +24,12 @@ body {
   color: var(--text);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 main {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }

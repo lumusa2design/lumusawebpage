@@ -1,1 +1,57 @@
-<p>algorithm-lab works!</p>
+<section class="algorithm-lab" id="algorithm-lab">
+  <div class="section-header">
+    <p>Algorithm Lab</p>
+    <h2>No solo implemento algoritmos: los hago visibles.</h2>
+  </div>
+
+  <div class="lab-grid">
+    <article class="lab-panel">
+      <div class="lab-topbar">
+        <div>
+          <span>Demo activa</span>
+          <strong>Bubble Sort Visualizer</strong>
+        </div>
+
+        <small>{{ status }}</small>
+      </div>
+
+      <div class="bars">
+        @for (bar of bars; track $index) {
+          <div
+            class="bar"
+            [class.active]="bar.active"
+            [class.sorted]="bar.sorted"
+            [style.height.%]="bar.value"
+          ></div>
+        }
+      </div>
+
+      <div class="lab-actions">
+        <button (click)="runSort()" [disabled]="running">
+          Ejecutar
+        </button>
+
+        <button class="secondary" (click)="generateArray()" [disabled]="running">
+          Nuevo array
+        </button>
+      </div>
+    </article>
+
+    <aside class="lab-stats">
+      <article>
+        <span>Comparaciones</span>
+        <strong>{{ comparisons }}</strong>
+      </article>
+
+      <article>
+        <span>Intercambios</span>
+        <strong>{{ swaps }}</strong>
+      </article>
+
+      <article>
+        <span>Algoritmo</span>
+        <strong>O(n²)</strong>
+      </article>
+    </aside>
+  </div>
+</section>

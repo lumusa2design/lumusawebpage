@@ -1,0 +1,49 @@
+<section class="about" id="about">
+  <div class="section-title">
+    <p>Sobre mí</p>
+    <h2>Un perfil entre software, sistemas y liderazgo.</h2>
+  </div>
+
+  <div class="about-dashboard">
+    <article class="about-card main-card">
+      <span class="card-label">Developer DNA</span>
+      <h3>Construyo entendiendo lo que hay debajo.</h3>
+      <p>
+        Me interesa crear software útil, pero también comprender la lógica interna:
+        algoritmos, arquitectura, cloud, sistemas y experiencia de usuario.
+      </p>
+    </article>
+
+    <article class="about-card">
+      <strong>150+</strong>
+      <span>algoritmos trabajados</span>
+    </article>
+
+    <article class="about-card">
+      <strong>AWS</strong>
+      <span>cloud & serverless</span>
+    </article>
+
+    <article class="about-card">
+      <strong>IA</strong>
+      <span>visión artificial y modelos</span>
+    </article>
+  </div>
+
+  <div class="timeline">
+    @for(item of timeline; track item.year) {
+      <article class="timeline-item">
+        <div class="timeline-year">{{ item.year }}</div>
+
+        <div class="timeline-node">
+          <span></span>
+        </div>
+
+        <div class="timeline-card">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </div>
+      </article>
+    }
+  </div>
+</section>

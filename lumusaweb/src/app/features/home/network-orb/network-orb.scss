@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  width: 100%;
+  height: clamp(260px, 60vw, 420px);
+}
+
+.network-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 0 45px rgba(52, 211, 153, 0.28));
+}

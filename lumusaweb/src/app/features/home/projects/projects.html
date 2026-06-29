@@ -1,0 +1,109 @@
+<section class="projects" id="projects">
+  <div class="section-header">
+    <p>Proyectos destacados</p>
+    <h2>Software, algoritmos y sistemas con intención.</h2>
+  </div>
+
+  <div class="projects-grid">
+    @for (project of projects; track project.title) {
+      <article class="project-card">
+        <div class="project-glow"></div>
+
+        <div class="project-visual" [class]="project.type">
+          @if (project.type === 'algorithms') {
+            <div class="bars">
+              <span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span>
+            </div>
+          }
+
+          @if (project.type === 'web') {
+            <div class="browser-preview">
+              <div></div>
+              <section></section>
+              <section></section>
+            </div>
+          }
+
+          @if (project.type === 'cloud') {
+            <div class="cloud-preview">
+              <span>API</span>
+              <span>λ</span>
+              <span>DB</span>
+            </div>
+          }
+
+          @if (project.type === 'vision') {
+            <div class="vision-preview">
+              <div class="camera-frame">
+                <span></span>
+              </div>
+              <div class="gesture-line"></div>
+            </div>
+          }
+
+          @if (project.type === 'graphics') {
+            <div class="graphics-preview">
+              <div class="cube">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          }
+
+          @if (project.type === 'IA') {
+            <div class="ai-preview">
+              <div class="neuron center"></div>
+              <div class="neuron n1"></div>
+              <div class="neuron n2"></div>
+              <div class="neuron n3"></div>
+              <div class="neuron n4"></div>
+
+              <svg viewBox="0 0 200 120">
+                <line x1="100" y1="60" x2="45" y2="30" />
+                <line x1="100" y1="60" x2="155" y2="30" />
+                <line x1="100" y1="60" x2="45" y2="90" />
+                <line x1="100" y1="60" x2="155" y2="90" />
+              </svg>
+            </div>
+          }
+
+          @if (project.type === 'software') {
+            <div class="software-preview">
+              <div class="window-bar">
+                <span></span><span></span><span></span>
+              </div>
+
+              <div class="app-lines">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          }
+        </div>
+
+        <div class="project-content">
+          <h3>{{ project.title }}</h3>
+
+          <p>{{ project.description }}</p>
+
+          <div class="tags">
+            @for (tag of project.tags; track tag) {
+              <span>{{ tag }}</span>
+            }
+          </div>
+
+          <a
+            [href]="project.link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver proyecto →
+          </a>
+        </div>
+      </article>
+    }
+  </div>
+</section>
